@@ -1,0 +1,8 @@
+# ninja log v5
+0	666	1643828363097306621	CMakeFiles/AdvancedProgrammingAssignment.dir/TestDrive.cpp.o	fc8fbde15c03cafc
+668	760	1643828363196658578	AdvancedProgrammingAssignment	5d3934780eeec741
+3	126	1643844271975125057	CMakeFiles/AdvancedProgrammingAssignment.dir/TestDrive.cpp.o	fc8fbde15c03cafc
+10	127	1643844271975084287	CMakeFiles/AdvancedProgrammingAssignment.dir/GameComponent.cpp.o	3ae3b57a04178f78
+18	128	1643844271977882692	CMakeFiles/AdvancedProgrammingAssignment.dir/DrawabaleGameComponent.cpp.o	1125622100779369
+6	833	1643844272681320276	CMakeFiles/AdvancedProgrammingAssignment.dir/Game.cpp.o	cf4373b45a0d9bd9
+833	1016	1643844272868136744	AdvancedProgrammingAssignment	1f8604676d50d650
