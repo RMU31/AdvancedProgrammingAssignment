@@ -5,11 +5,23 @@
 
 using namespace std;
 
-class Game::Game() {
+//function pointers for the initialise and terminate functions
+ void SetInitialise() {
+     cout << "Initialising Game" << endl;
+ }
+ void SetTerminate() {
+     cout << "Terminating Game" << endl;
+ }
 
-};
 
 int main() {
+    void (*initialise)();
+    initialise = SetInitialise;
+    initialise();
+
+    void (*terminate)();
+    terminate = SetTerminate;
+    terminate();
     cout << "Hello Krishna, can you see me?" << endl;
     return 0;
 }

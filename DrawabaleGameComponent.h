@@ -1,8 +1,18 @@
-//
-// Created by Rachana Mudrakolla on 02/02/2022.
-//
+#include <iostream>
+#include "GameComponent.h"
+#include <time.h>
 
-#ifndef ADVANCEDPROGRAMMINGASSIGNMENT_DRAWABALEGAMECOMPONENT_H
-#define ADVANCEDPROGRAMMINGASSIGNMENT_DRAWABALEGAMECOMPONENT_H
+using namespace std;
 
-#endif //ADVANCEDPROGRAMMINGASSIGNMENT_DRAWABALEGAMECOMPONENT_H
+class DrawableGameComponent {
+    void ChangeDirection();
+    void Draw();
+    int x;
+    int y;
+public:
+    DrawableGameComponent(int x, int y);
+    const int SCREEN_HEIGHT;
+    const int SCREEN_WIDTH;
+    void Update( const tm* eventTime);
+    enum Direction {Left, Right, Up, Down};
+};
