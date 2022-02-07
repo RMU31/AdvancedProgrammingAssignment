@@ -1,27 +1,36 @@
 #include <iostream>
 #include <time.h>
 #include "Game.h"
-#include "DrawabaleGameComponent.h"  // since Drawable Game component will inherit the GameComponent class, it doesn't need to be included separately
 
 using namespace std;
 
-//function pointers for the initialise and terminate functions
- void SetInitialise() {
-     cout << "Initialising Game" << endl;
- }
- void SetTerminate() {
-     cout << "Terminating Game" << endl;
- }
+Game::Game() {
 
+}
+void Game::SetTerminate() {
+    cout << "Terminating Game" << endl;
+}
 
+void Game::SetInitialise() {
+    cout << "Initialising Game" << endl;
+}
+
+// runs the actual programme by invoking the functions in setInitialise.
+void Game::Run() {
+
+}
+
+void Game::Add(GameComponent*) {
+
+}
+
+// calls the required functions that run the programme, after they inherit the functionality.
 int main() {
-    void (*initialise)();
-    initialise = SetInitialise;
-    initialise();
-
-    void (*terminate)();
-    terminate = SetTerminate;
-    terminate();
-    cout << "Hello Krishna, can you see me?" << endl;
+    Game *game = new Game();  // Creates a dynamic instance of Game
+    GameComponent gameComponent;
+    game->SetInitialise();
+    game->SetTerminate();
+    game->Add(&gameComponent);
+    game->Run();
     return 0;
 }

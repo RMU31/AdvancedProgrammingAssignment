@@ -1,18 +1,21 @@
-#include <iostream>
+//#include <iostream>
+//#include <time.h>
 #include "GameComponent.h"
-#include <time.h>
 
-using namespace std;
-
-class DrawableGameComponent {
-    void ChangeDirection();
-    void Draw();
-    int x;
-    int y;
+class DrawableGameComponent :public GameComponent {
 public:
-    DrawableGameComponent(int x, int y);
+    enum Direction {Left, Right, Up, Down};
+    Direction direction;
+    DrawableGameComponent(int x, int y, Direction);
     const int SCREEN_HEIGHT;
     const int SCREEN_WIDTH;
-    void Update( const tm* eventTime);
-    enum Direction {Left, Right, Up, Down};
+    void Update(const tm* eventTime);
+
+// defined the private interface after public, because direction needs to be passed into the private functions.
+private:
+    void ChangeDirection(int x, int y, Direction);
+    void Draw(int x, int y, Direction);
+    int x;
+    int y;
+
 };
